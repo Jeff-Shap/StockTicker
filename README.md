@@ -1,1 +1,1 @@
-# StockTicer
+# StockTicker
