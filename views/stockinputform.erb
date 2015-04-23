@@ -1,9 +1,41 @@
 <html>
+<head>	
+	<style type="text/css">
+	body {
+		background-color: #228B22;
+	}
+	table {
+		border: 2px dashed #90EE90;
+	}
+	h1 {
+		text-align: center;
+	}
+	</style>
+</head>
 <body>
-	<h1> Stock Stats </h1>
 	<form action = "/" method="POST">
-		Stock Symbol? <input type="text" name="stock_symbol">
-		<input type = "submit">
+		<table style="width:100%">
+			<thead>
+				<title>Stocks</title>
+			</thead>
+			<tbody>
+				<tr>	
+					<td colspan="2"><h1> $tock stats </h1></td>
+				</tr>
+				<tr>
+					<td style="text-align:right">NASDAQ Stock Symbol:</td>
+					<td><input type="text" name="stock_symbol" placeholder='e.g. "MSFT"'></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type = "submit" value="Get Stock Data"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><img src="http://images.clipartpanda.com/half-dollar-clipart-dollar-clip-art-artfavor_stylized_dollar_bill_money-3333px.png" alt="Dollar Bill" style="width:100px; height:100px">
+			</tbody>
+		</table>
+
+
 	</form>
 </body>
 </html>

@@ -2,6 +2,8 @@
 
 require 'sinatra'
 enable 'sessions'
+load 'get_stock_info.rb'
+include Symbols
 
 get "/" do 
 	erb :stockinputform
@@ -10,12 +12,13 @@ end
 post "/" do 
 	load 'get_stock_info.rb'
 	sym = params[:stock_symbol]
-	@data = stock_info(sym)
-	redirect ("/results")
+	redirect ("/results_#{sym}")
 end
 
-get "/results" do
-	@data.inspect
+get "/results_:sym" do 
+	import_symbols
+	@data = stock_info(params[:sym])
+	erb :results
 end
 
 # get "/:sym" do 

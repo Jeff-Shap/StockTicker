@@ -1,0 +1,108 @@
+<!-- results.html -->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Stock Results</title>
+	<style type="text/css">
+	body {
+		background-color: #228B22;
+	}
+	table {
+		border: 2px dashed #90EE90;
+	}
+	td {
+		border: 1px solid black;
+	}
+	</style>
+</head>
+<body>
+	<table>
+		<thead> NASDAQ: <%=params[:sym].upcase%> Stock Data </thead>
+		<tr>
+			<td> Live Price:
+			</td>
+			<td><%=$stock_data[0]%>
+			</td>
+		</tr>
+		<tr>
+			<td>Change:
+			</td>
+			<td><%=$stock_data[1]%>
+			</td>
+		</tr>
+		<tr>
+			<td>Change %:
+			</td>
+			<td><%=$stock_data[2]%>
+			</td>
+		</tr>
+		<tr>
+			<td>Previous Close:
+			</td>
+			<td><%=$stock_data[3]%>
+			</td>
+		</tr>
+		<tr>
+			<td>Previous Open:
+			</td>
+			<td><%=$stock_data[4]%>
+			</td>
+		</tr>
+		<tr>
+			<td>Bid Price:
+			</td>
+			<td><%=$stock_data[5]%>
+			</td>
+		</tr>
+		<tr>
+			<td>Asking Price:
+			</td>
+			<td><%=$stock_data[6]%>
+			</td>
+		</tr>
+		<tr>
+			<td>1 Year Targe Estimate:
+			</td>
+			<td><%=$stock_data[7]%>
+			</td>
+		</tr>
+		<tr>
+			<td>Day's Range:
+			</td>
+			<td><%=$stock_data[8]%>
+			</td>
+		</tr>
+		<tr>
+			<td>Volume:
+			</td>
+			<td><%=$stock_data[6]%>
+			</td>
+		</tr>
+		<tr>
+			<td>3-Month Average Volume:
+			</td>
+			<td><%=$stock_data[6]%>
+			</td>
+		</tr>
+		<tr>
+			<td>Market Cap:
+			</td>
+			<td><%=$stock_data[6]%>
+			</td>
+		</tr>
+		<tr>
+			<td>Dividend and Yield:
+			</td>
+			<td><%=$stock_data[6]%>
+			</td>
+		</tr>
+		<tr>
+			<td>Asking Price:
+			</td>
+			<td><%=$stock_data[6]%>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
