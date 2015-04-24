@@ -1,7 +1,6 @@
-#Gemfile
-
-source “https://rubygems.org”
-gem 'sinatra'
+# A sample Gemfile
+source "https://rubygems.org"
+gem ‘sinatra’
 gem ‘csv’
 gem ‘open-uri’
 gem ‘httparty’
