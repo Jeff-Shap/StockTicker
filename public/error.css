@@ -1,2 +1,18 @@
 /*error.css*/
 
+body {
+    background-color: #228B22;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+tr {
+    text-align: center;
+}
+
+#error {
+    border-bottom: 3px dashed #18A602;
+}
