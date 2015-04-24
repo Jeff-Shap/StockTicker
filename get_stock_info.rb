@@ -44,15 +44,17 @@ module Symbols
 			 stock_data << price_data.xpath("//td[@class='yfnc_tabledata1']")[14].content
 			 $stock_data = stock_data
 		else 
-			puts "INVALID STOCK SYMBOL"
+			puts "STOCK SYMBOL ERROR"
 		end
 		# return $stock_data
 	end
 end
 
-include Symbols
+
+##Tester##
+# include Symbols
 # import_symbols
 # stock_info("AAPL")
-# $stock_data
+# p $stock_data
 
 

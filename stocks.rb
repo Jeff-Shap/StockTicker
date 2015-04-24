@@ -19,12 +19,22 @@ end
 get "/results_:sym" do 
 	import_symbols
 	params[:data] = stock_info(params[:sym])
-	erb :results
+	if params[:data] == nil
+		redirect("/error.html")
+	else
+		erb :results
+	end
 end
 
-error do
-	redirect("/")
+get "/error.html" do
+	sleep(3)
+	erb :stockinputform
 end
+# get "/error_:sym.html" do 
+#  "hello"
+# end
+
+
 # get "/:sym" do 
 # 	@arry.read
 # end
