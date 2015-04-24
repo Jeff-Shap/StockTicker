@@ -46,7 +46,7 @@ module Symbols
 		else 
 			puts "INVALID STOCK SYMBOL"
 		end
-		return $stock_data
+		# return $stock_data
 	end
 end
 
