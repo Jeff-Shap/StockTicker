@@ -2,7 +2,7 @@
 
 require 'csv'
 require 'open-uri'
-require 'HTTParty'
+require 'httparty'
 require 'nokogiri'
 
 
