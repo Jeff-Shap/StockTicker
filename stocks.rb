@@ -18,17 +18,17 @@ end
 
 get "/results_:sym" do 
 	import_symbols
+	sym = params[:sym]
 	params[:data] = stock_info(params[:sym])
 	if params[:data] == nil
-		redirect("/error.html")
+		redirect("/error_#{sym}.html")
 	else
 		erb :results
 	end
 end
 
-get "/error.html" do
-	sleep(3)
-	erb :stockinputform
+get "/error_:sym.html" do
+	erb :error
 end
 # get "/error_:sym.html" do 
 #  "hello"
