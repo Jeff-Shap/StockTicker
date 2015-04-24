@@ -17,7 +17,7 @@ end
 
 get "/results_:sym" do 
 	import_symbols
-	@data = stock_info(params[:sym])
+	params[:data] = stock_info(params[:sym])
 	erb :results
 end
 

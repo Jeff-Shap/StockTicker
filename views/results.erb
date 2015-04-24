@@ -1,106 +1,124 @@
-<!-- results.html -->
-
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Stock Results</title>
-	<style type="text/css">
-	body {
-		background-color: #228B22;
-	}
-	table {
-		border: 2px dashed #90EE90;
-	}
-	td {
-		border: 1px solid black;
-	}
-	</style>
+<link rel="stylesheet" type="text/css" href="./stocks.css">
+<meta http-equiv="refresh" content="5">
 </head>
 <body>
+	<h1 style="text-decoration:underline; color:#18A602; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black">NASDAQ: <%=params[:sym].upcase%> $tock Data</h1>
 	<table>
-		<thead> NASDAQ: <%=params[:sym].upcase%> Stock Data </thead>
+		<tr>
+			<td>
+				
+			</td>
+		</tr>
 		<tr>
 			<td> Live Price:
 			</td>
-			<td><%=$stock_data[0]%>
+			<td><%=params[:data][0]%> &nbsp&nbsp<span style="font-size: 60%">(refreshed every 5 seconds)</span>
 			</td>
 		</tr>
 		<tr>
 			<td>Change:
 			</td>
-			<td><%=$stock_data[1]%>
+			<td><%=params[:data][1]%> <span> &nbsp &nbsp &nbsp</span>  <span style="font-size: 60%">(refreshed every 5 seconds)</span>
 			</td>
 		</tr>
 		<tr>
 			<td>Change %:
 			</td>
-			<td><%=$stock_data[2]%>
+			<td><%=params[:data][2]%> <span style="font-size: 60%">(refreshed every 5 seconds)</span>
 			</td>
 		</tr>
 		<tr>
 			<td>Previous Close:
 			</td>
-			<td><%=$stock_data[3]%>
+			<td><%=params[:data][3]%>
 			</td>
 		</tr>
 		<tr>
 			<td>Previous Open:
 			</td>
-			<td><%=$stock_data[4]%>
+			<td><%=params[:data][4]%>
 			</td>
 		</tr>
 		<tr>
 			<td>Bid Price:
 			</td>
-			<td><%=$stock_data[5]%>
+			<td><%=params[:data][5]%>
 			</td>
 		</tr>
 		<tr>
 			<td>Asking Price:
 			</td>
-			<td><%=$stock_data[6]%>
+			<td><%=params[:data][6]%>
 			</td>
 		</tr>
 		<tr>
-			<td>1 Year Targe Estimate:
+			<td>1 Year Target Estimate:
 			</td>
-			<td><%=$stock_data[7]%>
+			<td><%=params[:data][7]%>
 			</td>
 		</tr>
 		<tr>
 			<td>Day's Range:
 			</td>
-			<td><%=$stock_data[8]%>
+			<td><%=params[:data][8]%>
 			</td>
 		</tr>
 		<tr>
 			<td>Volume:
 			</td>
-			<td><%=$stock_data[6]%>
+			<td><%=params[:data][6]%>
 			</td>
 		</tr>
 		<tr>
 			<td>3-Month Average Volume:
 			</td>
-			<td><%=$stock_data[6]%>
+			<td><%=params[:data][6]%>
 			</td>
 		</tr>
 		<tr>
 			<td>Market Cap:
 			</td>
-			<td><%=$stock_data[6]%>
+			<td><%=params[:data][6]%>
 			</td>
 		</tr>
 		<tr>
 			<td>Dividend and Yield:
 			</td>
-			<td><%=$stock_data[6]%>
+			<td><%=params[:data][6]%>
 			</td>
 		</tr>
 		<tr>
 			<td>Asking Price:
 			</td>
-			<td><%=$stock_data[6]%>
+			<td><%=params[:data][6]%>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center"> Fork me on <a href="https://github.com/Jeff-Shap/StockTicker" id="ghlink">GitHub</a>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center"><span>Suggestions? </span><a href="mailto:codesheff@gmail.com?subject=Stock%20App%20Suggestions">Email me</a>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center">
+				Or you can fill out the form below:
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center">
+				<form>
+					<input type="text" name="feedback" size="60%"placeholder="This is my first deployed 'app', I appreciate the feedback!" ><br>
+					<input type="submit" value="Submit">
+				</form>
 			</td>
 		</tr>
 	</table>

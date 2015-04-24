@@ -50,8 +50,8 @@ module Symbols
 end
 
 include Symbols
-import_symbols
-stock_info("AAPL")
+# import_symbols
+# stock_info("AAPL")
 p $stock_data
 
 
